@@ -115,6 +115,7 @@ def lesson():
     try:
         video_id = extract_video_id(url)
     except Exception as e:
+        print(f"YOUTUBE ERROR: {type(e).__name__}: {e}", flush=True)
         if manual:
             video_id = ""
         else:
