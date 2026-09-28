@@ -134,6 +134,7 @@ def lesson():
             ]
             source = "YouTube transcript"
         except Exception as e:
+            print(f"YOUTUBE ERROR: {type(e).__name__}: {e}", flush=True)
             if not manual:
                 return jsonify({
                     "ok": False,
